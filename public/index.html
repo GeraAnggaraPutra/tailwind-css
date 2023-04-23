@@ -5,11 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn tailwind</title>
-    <link rel="stylesheet" href="css/final.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- custom class -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    spacing: {
+                        13: '3.25rem'
+                    },
+                    fontFamily: {
+                        inter: ['Inter']
+                    },
+                    colors: {
+                        gaa: '#bada55',
+                        kopiluwak: '#c0ffee'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body>
-    <h1 class="text-5xl font-bold text-blue-400">Hello World</h1>
-    <a href="" class="bg-green-500 p-3 m-3 text-white inline-block rounded shadow-emerald-200 hover:bg-green-800">Ini button</a>
-    <p class="m-3 bg-slate-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora velit dolore cupiditate. Id facere deleniti repellendus quis cupiditate eos non rerum, error beatae maxime, sequi voluptatem quo quasi quae accusantium officia tempora reiciendis quaerat sed nam nihil excepturi quod necessitatibus! Assumenda magnam molestiae tempore quod quos officiis fuga nemo autem.</p>
+    <h1 class="text-6xl font-bold text-center my-10">Learn <span class="bg-gradient-to-r from-blue-500 to-green-500"> TailwindCSS</span></h1>
+   
+    <section class="mb-10 bg-gradient-to-br from-indigo-200 via-red-300 to-yellow-500">
+        <h2 class="text-3xl text-center">Spacing</h2>
+        <div class="m-13">Margin</div>
+        <div class="p-8 ">Padding</div>
+    </section>
+
+    <section class="mb-10 bg-red-500">
+        <h2 class="text-3xl text-center">Sizing</h2>
+        <div class="w-32 h-32 bg-kopiluwak">Kotak 1</div> 
+        <!-- <div class="max-w-xs min-h-screen">Kotak 2</div>  -->
+    </section>
+
+    <section class="mb-96 font-inter max-w-3xl mx-auto">
+        <h2 class="mb-2 text-4xl font-bold">Ini Title Typography</h2>
+        <div class="mb-4 text-gray-500">By: <a href="#" class="text-gray-800 font-semibold">Gera Anggara</a>, 23 April 2023</div>
+        <p class="mb-4">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.<a href="#" class="underline font-semibold text-blue-600"> Facere</a>, voluptas cum! Quasi impedit laboriosam omnis nulla! Dicta quas officia quam quibusdam molestias sequi quod corporis, ipsa nemo laborum voluptates ut deserunt autem facilis, odio vero doloremque dolores vitae et! Hic suscipit tempora voluptatem minima mollitia, voluptatum cumque esse dolores alias.
+        </p>
+        <blockquote class="mb-4 italic font-thin text-xl">
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum iusto quasi vero non natus debitis doloribus unde itaque consequuntur reiciendis."
+        </blockquote>
+        <p class="mb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptas vel, amet consectetur error iste numquam enim dolorem similique quibusdam, quo rem deserunt perferendis, molestias quae nemo nobis voluptate alias.
+        </p>
+    </section>
 </body>
 </html>
